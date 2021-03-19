@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Current products</h1>
+    {% for product in products %}
+        <p>{{product.id}} - <a href="{{product.get_absolute_url}}">{{product.title}}</a></p>
+    {% endfor %}
+    <a href={% url 'products:product-create' %}>Create new product</a>
+{% endblock %}

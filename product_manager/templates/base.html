@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>First Django App</title>
+    </head>
+    <ul>
+        <li><a href={% url 'home' %}>Home</a></li>
+        <li><a href={% url 'contact' %}>Contact</a></li>
+        <li><a href={% url 'products:product-list' %}>Products</a></li>
+    </ul>
+    <body>
+        {% block content %}
+            replace me
+        {% endblock %}
+    </body>
+</html>
